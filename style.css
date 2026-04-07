@@ -1,0 +1,155 @@
+/* ── Reset & Global ── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: Georgia, serif; 
+  font-size: 16px;
+  line-height: 1.5;
+  color: #351810;
+  background: #FCEFDF;
+  padding: 0 20px; /* Base padding for mobile */
+}
+
+/* ── Layout Constraint ── */
+/* This ensures the Logo and Intro share the exact same width and centering */
+.site-header, .intro {
+  max-width: 600px; /* Adjust this to control how wide the "center" of your site is */
+  margin: 0 auto;
+}
+
+/* ── Header (Logo stays left of the centered block) ── */
+.site-header {
+  padding: 60px 0 40px 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.site-logo {
+  height: 40px; 
+  width: auto;
+}
+
+/* ── Intro Section (Centered as a unit) ── */
+.intro {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; /* Pushes text and photo to edges of the 600px box */
+  gap: 30px; 
+  margin-bottom: 100px;
+}
+
+.intro-text {
+  flex: 1;
+  text-align: left;
+}
+
+.intro-text h1 {
+  font-weight: normal;
+  font-style: italic;
+  font-size: 16pt; 
+  line-height: 1.1; 
+  letter-spacing: -0.04em; 
+  color: #D05711; 
+  margin-bottom: 10px;
+}
+
+.tagline, h2 {
+  color: #D58F3A; 
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 16px;
+}
+
+.tagline { margin-bottom: 25px; }
+
+.contact-item {
+  color: #351810;
+  font-size: 16px;
+}
+
+.profile-image {
+  width: 160px;
+  height: auto;
+  display: block;
+}
+
+/* ── Global Section Centering ── */
+h2 {
+  margin-bottom: 40px; 
+  text-align: center;
+}
+
+.clients, .bts {
+  margin-bottom: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* ── Client Block ── */
+.client-text-block {
+  font-size: 16px;
+  color: #351810;
+  max-width: 600px;
+  line-height: 1.8;
+  margin: 0 auto;
+}
+
+/* ── BTS Grid ── */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 15px;
+  width: 100%;
+  max-width: 450px;
+}
+
+.grid img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Footer ── */
+.site-footer {
+  padding: 60px 0 100px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-name {
+  color: #D58F3A;
+  text-transform: uppercase;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+.footer-item {
+  font-size: 16px;
+  color: #351810;
+}
+
+/* ── Mobile Layout ── */
+@media (max-width: 600px) {
+  .intro { 
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .intro-text { text-align: center; }
+  
+  .intro-photo { order: -1; margin-bottom: 20px; }
+
+  .site-header {
+    justify-content: center; /* Optionally center logo on mobile for balance */
+  }
+}
