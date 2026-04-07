@@ -76,6 +76,11 @@ body {
   width: 160px;
   height: auto;
   display: block;
+  margin-top: 40px;
+}
+
+.intro-photo {
+  flex-shrink: 0; 
 }
 
 /* ── Global Section Centering ── */
